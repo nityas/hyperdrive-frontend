@@ -10,44 +10,44 @@
 
 // Import Routes
 
-import { Route as rootRoute } from "./ui/routes/__root";
-import { Route as IndexImport } from "./ui/routes/index";
-import { Route as MarketAddressImport } from "./ui/routes/market.$address";
-import { Route as MarketsImport } from "./ui/routes/markets";
+import { Route as rootRoute } from './ui/routes/__root'
+import { Route as MarketsImport } from './ui/routes/markets'
+import { Route as IndexImport } from './ui/routes/index'
+import { Route as MarketAddressImport } from './ui/routes/market.$address'
 
 // Create/Update Routes
 
 const MarketsRoute = MarketsImport.update({
-  path: "/markets",
+  path: '/markets',
   getParentRoute: () => rootRoute,
-} as any);
+} as any)
 
 const IndexRoute = IndexImport.update({
-  path: "/",
+  path: '/',
   getParentRoute: () => rootRoute,
-} as any);
+} as any)
 
 const MarketAddressRoute = MarketAddressImport.update({
-  path: "/market/$address",
+  path: '/market/$address',
   getParentRoute: () => rootRoute,
-} as any);
+} as any)
 
 // Populate the FileRoutesByPath interface
 
-declare module "@tanstack/react-router" {
+declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    "/": {
-      preLoaderRoute: typeof IndexImport;
-      parentRoute: typeof rootRoute;
-    };
-    "/markets": {
-      preLoaderRoute: typeof MarketsImport;
-      parentRoute: typeof rootRoute;
-    };
-    "/market/$address": {
-      preLoaderRoute: typeof MarketAddressImport;
-      parentRoute: typeof rootRoute;
-    };
+    '/': {
+      preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/markets': {
+      preLoaderRoute: typeof MarketsImport
+      parentRoute: typeof rootRoute
+    }
+    '/market/$address': {
+      preLoaderRoute: typeof MarketAddressImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -57,6 +57,6 @@ export const routeTree = rootRoute.addChildren([
   IndexRoute,
   MarketsRoute,
   MarketAddressRoute,
-]);
+])
 
 /* prettier-ignore-end */
