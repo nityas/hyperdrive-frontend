@@ -14,14 +14,14 @@ export const getCapsuleWalletOpts: GetCapsuleOpts = {
     apiKey: VITE_CAPSULE_API_KEY, // get one at usecapsule.com/beta
     constructorOpts: {
       // passkey configs
-      portalBackgroundColor: '#12191D',
-      portalPrimaryButtonColor: '#77FBB2',
-      portalTextColor: '#F0F4F6',
-      portalPrimaryButtonTextColor: '#12191D',
+      portalBackgroundColor: '#202F36',
+      portalPrimaryButtonColor: '#15FFAB',
+      portalTextColor: '#EFF4F6',
+      portalPrimaryButtonTextColor: '#202F36',
       
       // email configs
       emailTheme: 'dark',
-      emailPrimaryColor: '#77FBB2',
+      emailPrimaryColor: '#15FFAB',
       githubUrl: 'https://github.com/delvtech',
       linkedinUrl: 'https://www.linkedin.com/company/delv-tech/',
       xUrl: 'https://twitter.com/delv_tech',
