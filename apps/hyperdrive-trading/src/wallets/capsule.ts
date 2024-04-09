@@ -12,7 +12,22 @@ export const getCapsuleWalletOpts: GetCapsuleOpts = {
     environment: VITE_CAPSULE_ENV, // Environment.PROD for Production
 
     apiKey: VITE_CAPSULE_API_KEY, // get one at usecapsule.com/beta
-    constructorOpts: {}, // TODO
+    constructorOpts: {
+      // passkey configs
+      portalBackgroundColor: '#12191D',
+      portalPrimaryButtonColor: '#77FBB2',
+      portalTextColor: '#F0F4F6',
+      portalPrimaryButtonTextColor: '#12191D',
+      
+      // email configs
+      emailTheme: 'dark',
+      emailPrimaryColor: '#77FBB2',
+      githubUrl: 'https://github.com/delvtech',
+      linkedinUrl: 'https://www.linkedin.com/company/delv-tech/',
+      xUrl: 'https://twitter.com/delv_tech',
+      homepageUrl: 'https://hyperdrive.trade/',
+      supportUrl: 'mailto:support@delv.tech',
+    },
   },
   appName: "Hyperdrive",
   theme: Theme.dark,
